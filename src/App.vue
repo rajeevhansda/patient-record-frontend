@@ -6,7 +6,9 @@
       </div>
       <div id="nav-item">
         <div v-if="user">
-          <button>PROFILE</button>
+          <button>
+            <router-link :to="{name: 'update'}">Profile</router-link>
+          </button>
           <button @click="logoutUser">LOGOUT</button>
         </div>
         <div v-else>

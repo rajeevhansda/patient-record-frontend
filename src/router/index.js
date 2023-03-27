@@ -21,11 +21,13 @@ const routes = [
     component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
   },
   {
-    path: "/:pathMatch(.*)*", // Unrecognized path automatically matches 404
-    redirect: '/404',
+    path: '/update',
+    name: 'update',
+    component: () => import(/* webpackChunkName: "update" */ '../views/UpdateUser.vue')
   },
+  
   {
-    path: "/404",
+    path: "*",
     name: "notFound",
     component: () =>
       import(/* webpackChunkName: "NotFound" */
