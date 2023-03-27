@@ -1,32 +1,23 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <nav id="nav">
+      <div id="nav-name"><h2>USER NAME</h2></div>
+      <div id="nav-item"><h2>PROFILE / LOGOUT</h2></div>
     </nav>
     <router-view/>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style scoped>
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+#nav-name,
+#nav-item{
+  padding: 10px 100px;
 }
 
-nav {
-  padding: 30px;
-}
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
+
