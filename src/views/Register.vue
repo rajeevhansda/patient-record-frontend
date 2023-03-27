@@ -61,7 +61,8 @@ export default {
         .then(response => response.text())
         .then(result => {
           localStorage.setItem('userData', result)
-          console.log(result)
+          window.location.pathname = '/';
+          // this.$router.push('/')
         })
         .catch(error => console.log('error', error));
 
