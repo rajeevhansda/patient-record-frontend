@@ -3,7 +3,7 @@
     <h2>HOME</h2>
     <form class="form" @submit.prevent="searchPatient">
 
-      <label for="search">Username: </label>
+      <label for="search">Search Patient: </label>
       <input type="text" name="search" autocomplete="on" required="true" />
 
 

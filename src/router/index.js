@@ -33,6 +33,14 @@ const routes = [
     name: 'allPatients',
     component: () => import(/* webpackChunkName: "allPatients" */ '../views/patient/PatientAll.vue')
   },
+  {
+    path: '/singlePatients',
+    name: 'singlePatients',
+    component: () => import(/* webpackChunkName: "allPatients" */ '../views/patient/SinglePatient.vue'),
+    props: route => ({ myObject: JSON.parse(route.params.myObject) })
+
+  },
+  
   
   {
     path: "*",

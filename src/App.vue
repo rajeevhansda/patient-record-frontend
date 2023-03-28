@@ -38,7 +38,10 @@ export default {
     }
   },
   created() {
-    this.user = JSON.parse(localStorage.getItem("userData"))
+    if(localStorage.getItem("userData")){
+
+      this.user = JSON.parse(localStorage.getItem("userData"))
+    }
   }
 }
 </script>
