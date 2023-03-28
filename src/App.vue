@@ -32,6 +32,8 @@ export default {
     logoutUser(){
       localStorage.removeItem('userData')
       this.user = null
+      window.location.pathname = '/';
+
     },
     loginUser(){
       this.$router.push('/login')

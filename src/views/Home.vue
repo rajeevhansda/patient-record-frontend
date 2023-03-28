@@ -11,6 +11,7 @@
 
       <button type="submit" class="btn" :disabled="loading">Search</button>
     </form>
+    <button><router-link :to="{name: 'registerPatients'}">Add Patient</router-link></button>
     <div class="container">
       <div class="card">
         <router-link :to="{ name: 'allPatients' }">All Patient</router-link>

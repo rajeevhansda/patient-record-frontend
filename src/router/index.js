@@ -40,6 +40,12 @@ const routes = [
     props: route => ({ myObject: JSON.parse(route.params.myObject) })
 
   },
+  {
+    path: '/registerPatients',
+    name: 'registerPatients',
+    component: () => import(/* webpackChunkName: "registerPatients" */ '../views/patient/PatientRegister.vue'),
+
+  },
   
   
   {

@@ -61,7 +61,11 @@ export default {
 
       fetch("http://localhost:8000/patient/update", requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
+        .then(result => {
+          console.log(result)
+          this.$router.push('/allPatients')
+
+        })
         .catch(error => console.log('error', error));
 
     },
