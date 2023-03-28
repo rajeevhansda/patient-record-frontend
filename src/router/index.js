@@ -25,6 +25,13 @@ const routes = [
     name: 'update',
     component: () => import(/* webpackChunkName: "update" */ '../views/UpdateUser.vue')
   },
+
+  // ---------------------------------------------------------------------
+  {
+    path: '/allPatients',
+    name: 'allPatients',
+    component: () => import(/* webpackChunkName: "allPatients" */ '../views/patient/PatientAll.vue')
+  },
   
   {
     path: "*",

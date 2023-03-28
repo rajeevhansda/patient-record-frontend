@@ -48,6 +48,7 @@ export default {
 nav {
   display: flex;
   justify-content: space-between;
+  border-bottom: 2px solid lightgray;
 }
 
 #nav-name,
