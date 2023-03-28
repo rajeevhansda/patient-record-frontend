@@ -24,26 +24,30 @@ const routes = [
   {
     path: '/update',
     name: 'update',
-    component: () => import(/* webpackChunkName: "update" */ '../views/UpdateUser.vue')
+    component: () => import(/* webpackChunkName: "update" */ '../views/UpdateUser.vue'),
+    meta: { requiresAuth: true }
   },
 
   // ---------------------------------------------------------------------
   {
     path: '/allPatients',
     name: 'allPatients',
-    component: () => import(/* webpackChunkName: "allPatients" */ '../views/patient/PatientAll.vue')
+    component: () => import(/* webpackChunkName: "allPatients" */ '../views/patient/PatientAll.vue'),
+    meta: { requiresAuth: true }
   },
   {
     path: '/singlePatients',
     name: 'singlePatients',
     component: () => import(/* webpackChunkName: "allPatients" */ '../views/patient/SinglePatient.vue'),
-    props: route => ({ myObject: JSON.parse(route.params.myObject) })
+    props: route => ({ myObject: JSON.parse(route.params.myObject) }),
+    meta: { requiresAuth: true }
 
   },
   {
     path: '/registerPatients',
     name: 'registerPatients',
     component: () => import(/* webpackChunkName: "registerPatients" */ '../views/patient/PatientRegister.vue'),
+    meta: { requiresAuth: true }
 
   },
   
