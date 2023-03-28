@@ -21,7 +21,6 @@
 export default {
 
     created() {
-        console.log("Created hook called.");
         this.user = JSON.parse(localStorage.getItem('userData'))
     },
     data() {
@@ -53,7 +52,6 @@ export default {
             fetch("http://localhost:8000/user/delete", requestOptions)
                 .then(response => response.text())
                 .then(result => {
-                    console.log(result)
                     localStorage.removeItem('userData')
                     this.user = null
                     window.location.pathname = '/';
@@ -87,7 +85,6 @@ export default {
             fetch("http://localhost:8000/user/update", requestOptions)
                 .then(response => response.text())
                 .then(result => {
-                    console.log(result)
                     localStorage.setItem('userData', result)
                     window.location.pathname = '/';
                 })

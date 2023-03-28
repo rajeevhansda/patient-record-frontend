@@ -56,7 +56,6 @@ export default {
       fetch("http://localhost:8000/user/login", requestOptions)
         .then(response => response.text())
         .then(result => {
-          console.log(result)
           localStorage.setItem('userData', result)
           window.location.pathname = '/';
           // this.$router.push('/')

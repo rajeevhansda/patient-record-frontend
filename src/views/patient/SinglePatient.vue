@@ -45,7 +45,6 @@ export default {
         medication
       }
 
-      console.log(patient);
 
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
@@ -62,7 +61,6 @@ export default {
       fetch("http://localhost:8000/patient/update", requestOptions)
         .then(response => response.text())
         .then(result => {
-          console.log(result)
           this.$router.push('/allPatients')
 
         })
@@ -90,7 +88,6 @@ export default {
       fetch("http://localhost:8000/patient/delete", requestOptions)
         .then(response => response.text())
         .then(result => {
-          console.log(result)
           this.$router.push('/allPatients')
 
         })

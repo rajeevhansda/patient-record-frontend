@@ -17,6 +17,8 @@
         <router-link :to="{ name: 'allPatients' }">All Patient</router-link>
       </div>
       <div class="p-card" v-for="(patient, index) in patients" :key="index">
+        <router-link :to="{ name: 'singlePatients', params: { myObject: JSON.stringify({  pId: patient._id, name: patient.name, disease: patient.disease, medication:patient.medication }) } }">Update Patient</router-link>
+
         <p>Name: {{ patient.name }}</p>
         <p>Disease</p>
         <ul>

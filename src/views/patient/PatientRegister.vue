@@ -43,7 +43,6 @@ export default {
         disease: arrayDisease,
         medication: arrayMedication
       }
-      console.log(patient);
 
 
       var myHeaders = new Headers();
@@ -61,7 +60,6 @@ export default {
       fetch("http://localhost:8000/patient/register", requestOptions)
         .then(response => response.text())
         .then(result => {
-          console.log(result)
           this.$router.push('/')
         })
         .catch(error => console.log('error', error));

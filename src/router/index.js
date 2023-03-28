@@ -66,7 +66,6 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     const user = localStorage.getItem('userData')
-    console.log("ROUTE" ,user);
     if (user === null) {
       next({
         path: '/login',
