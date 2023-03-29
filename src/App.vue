@@ -3,6 +3,9 @@
     <nav id="nav">
       <div id="nav-name">
         <h2>{{ user ? `NAME: ${user.name}` : ""  }}</h2>
+        <font-awesome-icon icon="fa-solid fa-user-secret" />
+        <font-awesome-icon icon="fa-brands fa-twitter" />
+        <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
       </div>
       <div id="nav-item">
         <div v-if="user">
