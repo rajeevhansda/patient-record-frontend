@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" >
     <h2>HOME</h2>
     <form class="form" @submit.prevent="searchPatient">
 
