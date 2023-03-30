@@ -115,10 +115,6 @@ input{
 
 
 .btn-register {
-
-
-
-
   background-image: linear-gradient(to right, var(--base-color) 0%, var(--base-dark-color) 51%, var(--base-light-color) 100%);
   padding: 5px 10px;
   text-align: center;
@@ -130,8 +126,7 @@ input{
   border-radius: 5px;
   display: block;
   width: 80%;
-  
-}
+  }
 .btn-register:disabled {
   background-image: none;
   background-color: gray;

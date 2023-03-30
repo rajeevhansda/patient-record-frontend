@@ -1,8 +1,8 @@
 <template>
   <div class="single-patient">
     <div class="container">
-      <h2>Patient Name: {{ myObject.name }}</h2>
-      <p>{{ myObject }}</p>
+      <!-- <h2>Patient Name: {{ myObject.name }}</h2> -->
+      <!-- <p>{{ myObject }}</p> -->
       <form class="form" @submit.prevent="updatePatient">
 
         <label for="username">Username</label>
@@ -17,9 +17,9 @@
 
 
 
-        <button type="submit" :disabled="!user.isAdmin">Update</button>
+        <button type="submit" :disabled="!user.isAdmin" class="btn submit">Update</button>
       </form>
-      <button @click="deletePatient" :disabled="!user.isAdmin">Delete patient</button>
+      <button @click="deletePatient" :disabled="!user.isAdmin" class="btn delete">Delete patient</button>
 
     </div>
   </div>
@@ -113,4 +113,70 @@ export default {
 
 <style scoped>
 
+.single-patient {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid lightgray;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  align-items: center;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 80%;
+  margin-bottom: 20px;
+
+}
+label{
+  font-weight: bolder;
+  font-size: larger;
+}
+
+input{
+  outline: 1px solid lightgray;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 5px;
+}
+
+
+
+.btn {
+  background-image: linear-gradient(to right, var(--base-color) 0%, var(--base-dark-color) 51%, var(--base-light-color) 100%);
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 5px;
+  display: block;
+  }
+
+  .submit{
+    width: 100%;
+  }
+  .delete{
+    width: 80%;
+  }
+.btn:disabled {
+  background-image: none;
+  background-color: gray;
+}
+
+.btn:hover {
+  background-position: right center;
+}
 </style>
