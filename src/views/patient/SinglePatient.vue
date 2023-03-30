@@ -64,7 +64,7 @@ export default {
       fetch("http://localhost:8000/patient/update", requestOptions)
         .then(response => response.text())
         .then(result => {
-          this.$router.push('/allPatients')
+          this.$router.push('/')
 
         })
         .catch(error => console.log('error', error));
@@ -91,7 +91,7 @@ export default {
       fetch("http://localhost:8000/patient/delete", requestOptions)
         .then(response => response.text())
         .then(result => {
-          this.$router.push('/allPatients')
+          this.$router.push('/')
 
         })
         .catch(error => console.log('error', error));
