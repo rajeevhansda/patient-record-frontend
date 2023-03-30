@@ -1,24 +1,27 @@
 <template>
-  <div>
-    <h2>Patient Name: {{ myObject.name }}</h2>
-    <p>{{ myObject }}</p>
-    <form class="form" @submit.prevent="updatePatient">
+  <div class="single-patient">
+    <div class="container">
+      <h2>Patient Name: {{ myObject.name }}</h2>
+      <p>{{ myObject }}</p>
+      <form class="form" @submit.prevent="updatePatient">
 
-      <label for="username">Username</label>
-      <input v-model="myObject.name" type="text" name="username" autocomplete="off" required="true" />
+        <label for="username">Username</label>
+        <input v-model="myObject.name" type="text" name="username" autocomplete="off" required="true" />
 
-      <label for="disease">Disease</label>
-      <input v-model="myObject.disease" type="text" name="disease" autocomplete="off" required="true" />
+        <label for="disease">Disease</label>
+        <input v-model="myObject.disease" type="text" name="disease" autocomplete="off" required="true" />
 
-      <label for="medication">Medication</label>
-      <input v-model="myObject.medication" type="text" name="medication" autocomplete="off" required="true" />
-
-
+        <label for="medication">Medication</label>
+        <input v-model="myObject.medication" type="text" name="medication" autocomplete="off" required="true" />
 
 
-      <button type="submit" :disabled="!user.isAdmin">Update</button>
-    </form>
-    <button @click="deletePatient" :disabled="!user.isAdmin">Delete patient</button>
+
+
+        <button type="submit" :disabled="!user.isAdmin">Update</button>
+      </form>
+      <button @click="deletePatient" :disabled="!user.isAdmin">Delete patient</button>
+
+    </div>
   </div>
 </template>
 
@@ -107,3 +110,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+</style>

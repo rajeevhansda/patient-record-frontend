@@ -55,6 +55,10 @@ export default {
   flex-wrap: wrap;
   gap: 10px;
 }
+.patientCard{
+  background-color: red;
+  outline: 1px solid green;
+}
 .card{
   background-color: lightgray;
   border-radius: 5px;
