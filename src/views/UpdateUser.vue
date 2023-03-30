@@ -50,7 +50,7 @@ export default {
                 redirect: 'follow'
             };
 
-            fetch("http://localhost:8000/user/delete", requestOptions)
+            fetch("https://zany-pink-pronghorn.cyclic.app/user/delete", requestOptions)
                 .then(response => response.text())
                 .then(result => {
                     localStorage.removeItem('userData')
@@ -83,7 +83,7 @@ export default {
                 redirect: 'follow'
             };
 
-            fetch("http://localhost:8000/user/update", requestOptions)
+            fetch("https://zany-pink-pronghorn.cyclic.app/user/update", requestOptions)
                 .then(response => response.text())
                 .then(result => {
                     localStorage.setItem('userData', result)

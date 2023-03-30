@@ -61,7 +61,7 @@ export default {
         redirect: 'follow'
       };
 
-      fetch("http://localhost:8000/patient/update", requestOptions)
+      fetch("https://zany-pink-pronghorn.cyclic.app/patient/update", requestOptions)
         .then(response => response.text())
         .then(result => {
           this.$router.push('/')
@@ -88,7 +88,7 @@ export default {
         redirect: 'follow'
       };
 
-      fetch("http://localhost:8000/patient/delete", requestOptions)
+      fetch("https://zany-pink-pronghorn.cyclic.app/patient/delete", requestOptions)
         .then(response => response.text())
         .then(result => {
           this.$router.push('/')

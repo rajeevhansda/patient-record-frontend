@@ -131,7 +131,7 @@ export default {
       redirect: 'follow'
     };
 
-    fetch("http://localhost:8000/patient/all", requestOptions)
+    fetch("https://zany-pink-pronghorn.cyclic.app/patient/all", requestOptions)
       .then(response => response.text())
       .then(result => {
         this.allPatients = JSON.parse(result)
@@ -160,7 +160,7 @@ export default {
         redirect: 'follow'
       };
 
-      fetch("http://localhost:8000/patient/search", requestOptions)
+      fetch("https://zany-pink-pronghorn.cyclic.app/patient/search", requestOptions)
         .then(response => response.text())
         .then(result => {
           this.patients = JSON.parse(result)

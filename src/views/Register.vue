@@ -58,7 +58,7 @@ export default {
         redirect: 'follow'
       };
 
-      fetch("http://localhost:8000/user/register", requestOptions)
+      fetch("https://zany-pink-pronghorn.cyclic.app/user/register", requestOptions)
         .then(response => response.text())
         .then(result => {
           localStorage.setItem('userData', result)

@@ -60,7 +60,7 @@ export default {
         redirect: 'follow'
       };
 
-      fetch("http://localhost:8000/patient/register", requestOptions)
+      fetch("https://zany-pink-pronghorn.cyclic.app/patient/register", requestOptions)
         .then(response => response.text())
         .then(result => {
           this.$router.push('/')

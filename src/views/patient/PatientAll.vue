@@ -38,7 +38,7 @@ export default {
       redirect: 'follow'
     };
 
-    fetch("http://localhost:8000/patient/all", requestOptions)
+    fetch("https://zany-pink-pronghorn.cyclic.app/patient/all", requestOptions)
       .then(response => response.text())
       .then(result => {
         this.patients = JSON.parse(result)                           
